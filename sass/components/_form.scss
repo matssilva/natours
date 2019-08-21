@@ -21,11 +21,27 @@
       border-bottom: 3px solid $color-primary;
     }
 
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+
     &::-webkit-input-placeholder {
       color: $color-grey-dark-2;
     }
   }
 
-  &_label {
+  &__label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.2s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
   }
 }
